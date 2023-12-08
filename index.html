@@ -17,17 +17,14 @@
          <a-asset-item id="Señor" src="https://cdn.glitch.global/166d16d0-fbd4-4899-b3aa-007c4911bb28/Se%C3%B1or.glb?v=1701694457776"></a-asset-item>
          <a-asset-item id="phone" src="https://cdn.glitch.global/166d16d0-fbd4-4899-b3aa-007c4911bb28/phone.glb?v=1701848286915"></a-asset-item>
          <a-asset-item id="Ciego" src="https://cdn.glitch.global/166d16d0-fbd4-4899-b3aa-007c4911bb28/Ciego.glb?v=1701694495428"></a-asset-item>
-         <a-asset-item id="planeta_tierra" src="https://cdn.glitch.global/166d16d0-fbd4-4899-b3aa-007c4911bb28/planeta_tierra.glb?v=1701848678571"></a-asset-item>
-         <a-asset-item id="personaje" src="https://cdn.glitch.global/166d16d0-fbd4-4899-b3aa-007c4911bb28/personaje.glb?v=1701886859182"></a-asset-item>
          
 
-      <audio id="sound1" src="Estadistica.mp3" preload="auto"></audio>
-      <audio id="sound2" src="Problema.mp3" preload="auto"></audio>
-      <audio id="sound3" src="Proyecto.mp3" preload="auto"></audio>
-      <audio id="sound4" src="App.mp3" preload="auto"></audio>
-      <audio id="sound5" src="Agudezas.mp3" preload="auto"></audio>
-      <audio id="sound6" src="Causas.mp3" preload="auto"></audio>
-
+      <audio id="sound1" src="https://cdn.glitch.global/166d16d0-fbd4-4899-b3aa-007c4911bb28/Estadistica.mp3?v=1701849771336" preload="auto"></audio>
+      <audio id="sound2" src="https://cdn.glitch.global/166d16d0-fbd4-4899-b3aa-007c4911bb28/Problema.mp3?v=1701887634235" preload="auto"></audio>
+      <audio id="sound3" src="https://cdn.glitch.global/166d16d0-fbd4-4899-b3aa-007c4911bb28/Proyecto.mp3?v=1701887634818" preload="auto"></audio>
+      <audio id="sound4" src="https://cdn.glitch.global/166d16d0-fbd4-4899-b3aa-007c4911bb28/App.mp3?v=1701887604271" preload="auto"></audio>
+     
+     
 
 
 		</a-assets>
@@ -65,26 +62,12 @@
       </a-marker>
      
       
-      <a-marker id="m5" type="barcode" value="5" raycaster="objects: .clickable" emitevents="true"
- cursor="fuse: false; rayOrigin: mouse;">	
-          <a-entity     
-                gltf-model="#planeta_tierra" scale="1 1 1" rotation="90 270 90" position="0.1 0.1 0.1" class="clickable" gesture-handler soundhandler>
-          </a-entity>
-      </a-marker>
-      
-        <a-marker id="m6" type="barcode" value="6" raycaster="objects: .clickable" emitevents="true"
- cursor="fuse: false; rayOrigin: mouse;">	
-          <a-entity     
-                gltf-model="#personaje" scale="0.7 0.7 0.7" rotation="-75 270 90" position="0.1 0.1 0.1" class="clickable" gesture-handler soundhandler>
-          </a-entity>
-      </a-marker>
     
+      
     <a-entity id="audio1" sound="src: sound1" autoplay="false"></a-entity>
     <a-entity id="audio2" sound="src: sound2" autoplay="false"></a-entity>
     <a-entity id="audio3" sound="src: sound3" autoplay="false"></a-entity>
     <a-entity id="audio4" sound="src: sound4" autoplay="false"></a-entity>
-    <a-entity id="audio5" sound="src: sound5" autoplay="false"></a-entity>
-    <a-entity id="audio6" sound="src: sound6" autoplay="false"></a-entity>
     
 		<a-entity camera></a-entity>
 		
@@ -97,8 +80,7 @@
                   var entity2 = document.querySelector('#audio2');
                   var entity3 = document.querySelector('#audio3');
                   var entity4 = document.querySelector('#audio4');
-                  var entity5 = document.querySelector('#audio5');
-                  var entity6 = document.querySelector('#audio6');
+                 
                                                        
 if (document.querySelector('#m1').object3D.visible == true) {
 entity6.components.sound.pauseSound();
@@ -132,13 +114,7 @@ entity1.components.sound.pauseSound();
 entity5.components.sound.pauseSound();
 entity4.components.sound.playSound();
   
-}else if (document.querySelector('#m5').object3D.visible == true) {
-entity6.components.sound.pauseSound();
-entity2.components.sound.pauseSound();
-entity3.components.sound.pauseSound();
-entity4.components.sound.pauseSound();
-entity6.components.sound.pauseSound();
-entity5.components.sound.playSound();
+
 
 } else if (document.querySelector('#m6').object3D.visible == true) {
 entity1.components.sound.pauseSound();
@@ -148,22 +124,14 @@ entity4.components.sound.pauseSound();
 entity5.components.sound.pauseSound();
 entity6.components.sound.playSound();
 
-}else{
-entity1.components.sound.pauseSound();
-entity2.components.sound.pauseSound();
-entity3.components.sound.pauseSound();
-entity4.components.sound.pauseSound();
-entity5.components.sound.pauseSound();
-entity6.components.sound.pauseSound();
- }
 }
+
 });
 </script>
 
 
-
-			
-		
-		
 	</body>
 </html>
+
+
+
